@@ -28,11 +28,13 @@ export function Header() {
             <Link to="/">Home</Link>
             <br />
             <Link to="/about">About</Link>
+            <br />
+            <Link to="http://www.google.com">Learn Something New</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            {/* <a className="nav-link" href="#">
               Link
-            </a>
+            </a> */}
           </li>
           <li className="nav-item dropdown">
             <a
