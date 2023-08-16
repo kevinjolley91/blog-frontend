@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   return (
@@ -27,15 +28,21 @@ export function Header() {
             </a> */}
             <Link to="/">Home</Link>
             <br />
-            <Link to="/about">About</Link>
+            {/* <Link to="/signup">Signup</Link>
             <br />
-            <Link to="http://www.google.com">Learn Something New</Link>
+            <Link to="/login">Login</Link>
+            <br />
+            <Link to="/logout">Logout</Link>
+            <br /> */}
+            <Link to="/posts/new">New Post</Link>
+            <br />
+            <Link to="/about">About</Link>
           </li>
-          <li className="nav-item">
-            {/* <a className="nav-link" href="#">
+          {/* <li className="nav-item">
+            <a className="nav-link" href="#">
               Link
-            </a> */}
-          </li>
+            </a>
+          </li> */}
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -44,25 +51,30 @@ export function Header() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              Users
             </a>
             <ul className="dropdown-menu">
-              <li>
+              {/* <li>
                 <a className="dropdown-item" href="#">
                   Action
                 </a>
+              </li> */}
+              <li>
+                <a className="dropdown-item" href="/signup">
+                  Signup
+                </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Another action
+                <a className="dropdown-item" href="/login">
+                  Login
                 </a>
               </li>
               <li>
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
+                <a className="dropdown-item" href="/logout">
+                  <LogoutLink />
                 </a>
               </li>
             </ul>
