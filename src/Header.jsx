@@ -23,26 +23,12 @@ export function Header() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            {/* <a className="nav-link active" aria-current="page" href="#">
-              Home
-            </a> */}
-            <Link to="/">Home</Link>
+            <Link to="/">All Posts</Link>
             <br />
-            {/* <Link to="/signup">Signup</Link>
-            <br />
-            <Link to="/login">Login</Link>
-            <br />
-            <Link to="/logout">Logout</Link>
-            <br /> */}
             <Link to="/posts/new">New Post</Link>
             <br />
             <Link to="/about">About</Link>
           </li>
-          {/* <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
-          </li> */}
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -54,11 +40,6 @@ export function Header() {
               Users
             </a>
             <ul className="dropdown-menu">
-              {/* <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li> */}
               <li>
                 <a className="dropdown-item" href="/signup">
                   Signup
