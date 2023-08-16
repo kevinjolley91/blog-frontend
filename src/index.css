@@ -1,0 +1,16 @@
+#root {
+  font-family: Papyrus, fantasy; 
+  font-size: 18px; 
+  font-style: normal; 
+  font-variant: normal;
+  color: rgb(0, 197, 29);
+  background-image: url(assets/fancy-cushion.webp);
+}
+
+#posts-index img {
+  width: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
