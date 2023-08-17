@@ -37,7 +37,7 @@ export function Header() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Users
+              User
             </a>
             {localStorage.jwt === undefined ? (
               <>
