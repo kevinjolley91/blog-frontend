@@ -39,27 +39,27 @@ export function Header() {
             >
               Users
             </a>
-            <ul className="dropdown-menu">
+            {localStorage.jwt === undefined ? (
+              <>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/signup">
+                      Signup
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/login">
+                      Login
+                    </a>
+                  </li>
+                </ul>
+              </>
+            ) : (
               <li>
-                <a className="dropdown-item" href="/signup">
-                  Signup
-                </a>
+                <LogoutLink />
               </li>
-              <li>
-                <a className="dropdown-item" href="/login">
-                  Login
-                </a>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <a className="dropdown-item" href="/logout">
-                  <LogoutLink />
-                </a>
-              </li>
-            </ul>
-          </li>
+            )}
+          </li>{" "}
           <li className="nav-item">
             <a className="nav-link disabled">Disabled</a>
           </li>
