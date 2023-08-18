@@ -19,10 +19,19 @@ export function PostsIndex(props) {
         .filter((post) => post.title.toLowerCase().includes(searchFilter.toLowerCase()))
         .map((post) => (
           <div key={post.id} className="posts">
-            <h2>{post.title}</h2>
-            <img src={post.image} alt={post.title} />
-            <p>{post.body}</p>
-            <button onClick={() => props.onShowPost(post)}>More info</button>
+            <div className="card mb-3">
+              <div className="text-center">
+                <img src={post.image} alt={post.title} />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">{post.title}</h5>
+                <p className="card-text">{post.body}</p>
+                <p className="card-text">
+                  <small className="text-muted">{post.created_at}</small>
+                </p>
+              </div>
+              <button onClick={() => props.onShowPost(post)}>More info</button>
+            </div>
           </div>
         ))}
     </div>
